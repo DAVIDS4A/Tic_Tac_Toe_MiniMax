@@ -74,54 +74,6 @@ def best_move(board):
 
     return best_move
 
-"""
-def play_game():
-    while True:
-        board = [[' ' for _ in range(3)] for _ in range(3)]
-        print("Welcome to Tic-Tac-Toe!")
-
-        while True:
-            print_board(board)
-            player_move = input("Enter your move (row[1-3] column[1-3]): ")
-            player_row, player_col = map(int, player_move.split())
-            player_row -= 1
-            player_col -= 1
-
-            if board[player_row][player_col] != ' ':
-                print("Invalid move. Try again.")
-                continue
-
-            board[player_row][player_col] = 'X'
-            winner = check_winner(board)
-            if winner:
-                print_board(board)
-                print(f"Congratulations! {winner} wins!")
-                break
-
-            if len(get_empty_cells(board)) == 0:
-                print_board(board)
-                print("It's a tie!")
-                break
-
-            ai_move = best_move(board)
-            board[ai_move[0]][ai_move[1]] = 'O'
-
-            winner = check_winner(board)
-            if winner:
-                print_board(board)
-                print(f"AI wins! Better luck next time.")
-                break
-
-            if len(get_empty_cells(board)) == 0:
-                print_board(board)
-                print("It's a tie!")
-                break
-
-        play_again = input("Do you want to play again? (yes/no): ")
-        if play_again.lower() != 'yes':
-            print("Thanks for playing!")
-            break
-"""
 
 
 # Initialize variables
