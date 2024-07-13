@@ -31,6 +31,7 @@ def get_empty_cells(board):
                 empty_cells.append((i, j))
     return empty_cells
 
+# Minimax algo
 def minimax(board, depth, is_maximizing):
     winner = check_winner(board)
     if winner:
