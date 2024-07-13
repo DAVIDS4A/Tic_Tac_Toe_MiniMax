@@ -1,7 +1,7 @@
 
 # 🎮 Tic Tac Toe with Minimax Algorithm 🧠
 
-**Course:** Artificial Intelligence (Game Theory Topic)  
+**Course:** Artificial Intelligence (Game Theory)  
 **Program:** MSc. Intelligent Computer Systems Engineering  
 **Author:** Shyaka Noble David
 
@@ -29,8 +29,8 @@ The Minimax algorithm is used to create an unbeatable AI opponent, ensuring a ch
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/tic_tac_toe_minimax.git
-    cd tic_tac_toe_minimax
+    git clone https://github.com/DAVIDS4A/Tic_Tac_Toe_MiniMax.git
+    cd Tic_Tac_Toe_MiniMax
     ```
 
 2. **Install dependencies**:
@@ -66,60 +66,11 @@ The Minimax algorithm is used to create an unbeatable AI opponent, ensuring a ch
 
 ---
 
-## ✨ Screenshots
-
-![Game Interface](screenshot.png)
-
----
-
 ## 📚 Learning Outcomes
 
 - Understanding of the Minimax algorithm and its application in Game Theory.
 - Experience with Flask for web development.
 - Improved problem-solving and algorithmic thinking skills.
-
----
-
-## 🎨 Styling
-
-To make the game more visually appealing, consider adding some CSS to the `index.html` file:
-
-```css
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-}
-
-h1 {
-    color: #333;
-}
-
-.board {
-    display: inline-block;
-    border: 2px solid #333;
-}
-
-.row {
-    display: flex;
-}
-
-.cell {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #333;
-    line-height: 60px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.message {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #555;
-}
-```
 
 ---
 
@@ -129,10 +80,3 @@ This project is licensed under the MIT License.
 
 ---
 
-Feel free to reach out if you have any questions or need further assistance!
-
-Happy coding! 🚀
-
----
-
-Enjoy playing and exploring the fascinating world of Game Theory and Artificial Intelligence! 🌟
