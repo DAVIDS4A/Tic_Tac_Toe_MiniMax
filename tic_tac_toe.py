@@ -88,7 +88,7 @@ def index():
         if not game_over:
             user_move = request.form['move']
             try:
-                row, col = map(int, user_move.split(','))
+                row, col = map(int, user_move.split('-'))
                 row -= 1
                 col -= 1
 
@@ -110,7 +110,7 @@ def index():
 
                         winner = check_winner(board)
                         if winner:
-                            message = f"AI wins! Better luck next time."
+                            message = f"AI WINS! YOU SUCKKKK!"
                             game_over = True
                         elif len(get_empty_cells(board)) == 0:
                             message = "It's a tie!"
@@ -118,7 +118,7 @@ def index():
                         else:
                             message = None
             except ValueError:
-                message = "Invalid input format. Enter coordinates as 'row,col'."
+                message = "Invalid input format. Click on an empty cell to make a move."
 
         else:
             message = "Game over. Start a new game!"

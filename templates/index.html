@@ -11,7 +11,11 @@
         }
 
         h1 {
-            color: #333;
+            color: #001e4e;
+        }
+        
+        label {
+            color: #001e4e;
         }
 
         table {
@@ -20,15 +24,21 @@
         }
 
         table, th, td {
-            border: 1px solid #333;
+            border: 1px solid #001e4e;
             padding: 10px;
         }
 
         table td {
             width: 50px;
+            background-color: #fff;
             height: 50px;
+            color: #00d9c6;
             text-align: center;
             font-size: 24px;
+        }
+
+        table td:hover {
+            background-color: #001e4e;
         }
 
         form {
@@ -46,7 +56,7 @@
 
         button {
             cursor: pointer;
-            background-color: #333;
+            background-color: #36ffc5;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -55,28 +65,45 @@
         }
 
         button:hover {
-            background-color: #555;
+            background-color: #001e4e;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var buttons = document.querySelectorAll("button[name='move']");
+            buttons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var move = this.value;
+                    fetch("/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: "move=" + move,
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.documentElement.innerHTML = data;
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
     <table>
         {% for row in board %}
         <tr>
-            {% for cell in row %}
-            <td>{{ cell }}</td>
+            {% for col in range(2, -1, -1) %}
+            <td><button type="submit" id="{{ loop.index }}-{{ col }}" name="move" name="move" value="{{ loop.index }}-{{ col }}" {% if row[col] != ' ' %}disabled{% endif %}>{{ row[col] }}</button></td>
             {% endfor %}
         </tr>
         {% endfor %}
     </table>
     <br>
     {% if not game_over %}
-    <form method="post">
-        <label for="move">Enter your move (row,col):</label>
-        <input type="text" id="move" name="move" required>
-        <button type="submit">Submit</button>
-    </form>
+    <!-- Remove the form for input -->
     {% endif %}
     {% if message %}
     <p>{{ message }}</p>
