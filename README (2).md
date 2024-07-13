@@ -4,9 +4,6 @@
 **Course:** Artificial Intelligence (Game Theory)  
 **Program:** MSc. Intelligent Computer Systems Engineering  
 **Author:** Shyaka Noble David
-
-![Tic Tac Toe](https://img.icons8.com/color/48/000000/tic-tac-toe.png)
-
 ---
 
 ## 🌟 Overview
