@@ -2,8 +2,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Tic-Tac-Toe logic (same as before)
-# ... (previous code for game logic)
+
 import math
 
 def print_board(board):
